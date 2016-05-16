@@ -1,6 +1,6 @@
 Meteor.methods({
   sendEmail: function(){
-    Accounts.sendVerificationEmail(Meteor.userId(), Meteor.user().emails[0].address);
+    Accounts.sendVerificationEmail(Meteor.userId(), Meteor.user().emails[0].address)
   },
   findUser: function(email){
     var user = Accounts.findUserByEmail(email);
@@ -17,3 +17,14 @@ Meteor.startup(function(){
   };
   process.env.MAIL_URL='smtp://' + encodeURIComponent(smtp.username) + ':' + encodeURIComponent(smtp.password) + '@' + encodeURIComponent(smtp.server) + ':' + smtp.port;
 });
+
+// Accounts.validateLoginAttempt(function(user){
+//   return user.methodArguments[0].verified
+// });
+
+// Accounts.validateNewUser(function(options, user){
+//   console.log('options', options);
+//   console.log('user', user);
+//   Meteor.call('sendEmail', options._id, options.emails[0].address);
+//   return true
+// });
