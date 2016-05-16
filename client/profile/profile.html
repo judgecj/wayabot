@@ -2,28 +2,47 @@
 
   <div class="row">
 
-    <div class="col-md-6"><h3>Tabs -left For Zy Peh</h3>
+    <div class="col-md-8 user-profile">
 
       <!-- tabs left -->
       <div class="tabbable tabs-left">
         <ul class="nav nav-tabs">
-          <li><a href="#a" data-toggle="tab">My Profile</a></li>
-          <li class="active"><a href="#b" data-toggle="tab">Two</a></li>
-          <li><a href="#c" data-toggle="tab">Twee</a></li>
-        </ul>
-        <div class="tab-content">
-         <div class="tab-pane active" id="a">
-            <div class="form-group">
-                <input type="username" name="username" id="username" class="form-control input-lg signup-username" placeholder="Username">
+            <div class="profile-userpic">
+                <img src="https://d2kym60b0ykakr.cloudfront.net/avatar/thisnthat-4ef99d1eb778d221497b8cd4ce425519ed6e604fe28d3c6f4e04e1aa500/avatar.my-profile-pic1.png" class="img-responsive" alt="">
+                <h3> Username </h3>
             </div>
+            <li class="active"><a href="#second" data-toggle="tab">My Profile</a></li>
+            <li><a href="#first" data-toggle="tab">Change Email/Password</a></li>
+            <li><a href="#third" data-toggle="tab">Extra Field</a></li>
+        </ul>
+        <div class="tab-content col-md-6 user-profile">
+         <div class="tab-pane" id="first">
+             <hr class="colorgraph">
             <div class="form-group">
                 <input type="email" name="email" id="email" class="form-control input-lg sign-email" placeholder="Email Address">
             </div>
             <div class="form-group">
-                <input type="password" name="password" id="password" class="form-control input-lg signup-password" placeholder="Password">
+                <input type="password" name="password" id="password" class="form-control input-lg signup-password" placeholder="Current Password">
             </div>
             <div class="form-group">
-                <input type="password" name="password" id="password" class="form-control input-lg signup-password" placeholder="Confirm Password">
+                <input type="password" name="password" id="password" class="form-control input-lg signup-password" placeholder="New Password">
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" id="password" class="form-control input-lg signup-password" placeholder="Confirm New Password">
+            </div>
+            <hr class="colorgraph">
+            <div class="row">
+                <div class="col-xs-6">
+                    <input type="submit" class="btn btn-lg btn-success btn-block signup-btn" value="Save Changes">
+                </div>
+                <div class="col-xs-6">
+                    <input type="submit" class="btn btn-lg btn-success btn-block signup-btn" value="Forgot Password?">
+                </div>
+            </div>
+         </div>
+         <div class="tab-pane active" id="second">
+           <div class="form-group">
+                <input type="username" name="username" id="username" class="form-control input-lg signup-username" placeholder="Username">
             </div>
             <h2>Business Details{{user}}</h2>
             <hr class="colorgraph">
@@ -34,7 +53,7 @@
                 <input type="regnum" name="regnum" id="regnum" class="form-control input-lg signup-regnum" placeholder="Business Registration Number">
             </div>
             <div class="form-group">
-                <input type="country" name="country" id="country" class="form-control input-lg signup-country" placeholder="Business Registration Number">
+                <input type="country" name="country" id="country" class="form-control input-lg signup-country" placeholder="Country of Business">
             </div>
             <hr class="colorgraph">
             <div class="row">
@@ -43,12 +62,9 @@
                 </div>
             </div>
          </div>
-         <div class="tab-pane" id="b">
-            <div class="form-group">
-                    <input type="username" name="username" id="username" class="form-control input-lg signup-username" placeholder="Username">
-            </div>
+         <div class="tab-pane" id="third">
+             <p>content coming soon</p>
          </div>
-         <div class="tab-pane" id="c">three</div>
         </div>
       </div>
       <!-- /tabs -->

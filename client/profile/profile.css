@@ -5,8 +5,8 @@
   float: none;
 }
 
-.tabs-left > .nav-tabs > li > a,
-.tabs-right > .nav-tabs > li > a {
+.tabs-left > .nav-tabs > li > first,
+.tabs-right > .nav-tabs > li > first {
   min-width: 74px;
   margin-right: 0;
   margin-bottom: 3px;
@@ -18,21 +18,35 @@
   border-right: 1px solid #ddd;
 }
 
-.tabs-left > .nav-tabs > li > a {
+.tabs-left > .nav-tabs > li > first {
   margin-right: -1px;
   -webkit-border-radius: 4px 0 0 4px;
      -moz-border-radius: 4px 0 0 4px;
           border-radius: 4px 0 0 4px;
 }
 
-.tabs-left > .nav-tabs > li > a:hover,
-.tabs-left > .nav-tabs > li > a:focus {
+.tabs-left > .nav-tabs > li > first:hover,
+.tabs-left > .nav-tabs > li > first:focus {
   border-color: #eeeeee #dddddd #eeeeee #eeeeee;
 }
 
-.tabs-left > .nav-tabs .active > a,
-.tabs-left > .nav-tabs .active > a:hover,
-.tabs-left > .nav-tabs .active > a:focus {
+.tabs-left > .nav-tabs .active > first,
+.tabs-left > .nav-tabs .active > first:hover,
+.tabs-left > .nav-tabs .active > first:focus {
   border-color: #ddd transparent #ddd #ddd;
   *border-right-color: #ffffff;
+}
+
+h3 {
+    text-align: center;
+}
+
+.col-md-6.user-profile {
+    margin-left: 10%;
+    padding-top: 20px;
+}
+
+.col-md-8.user-profile {
+    margin-left: 20%;
+    padding-top: 20px;
 }
