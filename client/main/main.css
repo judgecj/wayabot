@@ -908,6 +908,7 @@ a.accordion-toggle  i{
 
 .tab-content{
   padding: 20px;
+  float: right;
 }
 
 .tab-content h2{

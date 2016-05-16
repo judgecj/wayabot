@@ -1,0 +1,76 @@
+<template name="login">
+ <div class="container">
+    <div class="panel panel-login">
+      <div class="panel-heading">
+        <div class="row">
+            <div class="col-xs-6">
+              <a href="#" class="active" id="login-form-link">Login</a>
+            </div>
+            <div class="col-xs-6">
+              <a href="#" id="register-form-link">Register</a>
+            </div>
+        </div>
+        <hr>
+        <div class="panel-body">
+          <div class="row" style="margin-top:20px">
+                  <form id="login-form" action="http://phpoll.com/login/process" method="post" role="form" style="display: block;">
+                  <h2>Welcome Back! Please Sign In</h2>
+                  <hr class="colorgraph">
+                   <div class="form-group">
+                      <input type="username" name="username" id="username" class="form-control input-lg login-username" placeholder="Username">
+                  </div>
+                  <div class="form-group">
+                      <input type="email" name="email" id="email" class="form-control input-lg login-email" placeholder="Email Address">
+                  </div>
+                  <div class="form-group">
+                      <input type="password" name="password" id="password" class="form-control input-lg login-password" placeholder="Password">
+                  </div>
+                  <hr class="colorgraph">
+                  <div class="row">
+                    <div class="col-xs-12">
+                          <input type="submit" class="btn btn-lg btn-success btn-block login-btn" value="SUBMIT">
+                    </div>
+                  </div>
+                  </form>
+
+                  <!--Sign Up Form-->
+                  <form id="register-form" action="http://phpoll.com/register/process" method="post" role="form" style="display: none;">
+                   <!-- <h2>Create User Account</h2> -->
+                  <h2>Personal Details</h2>
+                  <hr class="colorgraph">
+                  <div class="form-group">
+                              <input type="username" name="username" id="username" class="form-control input-lg signup-username" placeholder="Username">
+                  </div>
+                  <div class="form-group">
+                              <input type="email" name="email" id="email" class="form-control input-lg sign-email" placeholder="Email Address">
+                  </div>
+                  <div class="form-group">
+                              <input type="password" name="password" id="password" class="form-control input-lg signup-password" placeholder="Password">
+                  </div>
+                  <div class="form-group">
+                              <input type="password" name="password" id="password" class="form-control input-lg signup-password" placeholder="Confirm Password">
+                  </div>
+                  <h2>Business Details</h2>
+                  <hr class="colorgraph">
+                  <div class="form-group">
+                              <input type="businessname" name="businessname" id="businessname" class="form-control input-lg signup-businessname" placeholder="Business name">
+                  </div>
+                  <div class="form-group">
+                              <input type="regnum" name="regnum" id="regnum" class="form-control input-lg signup-regnum" placeholder="Business Registration Number">
+                  </div>
+                  <div class="form-group">
+                              <input type="country" name="country" id="country" class="form-control input-lg signup-country" placeholder="Business Registration Number">
+                  </div>
+                  <hr class="colorgraph">
+                  <div class="row">
+                    <div class="col-xs-12">
+                                  <input type="submit" class="btn btn-lg btn-success btn-block signup-btn" value="CREATE">
+                    </div>
+                  </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+ </div>
+</template>
