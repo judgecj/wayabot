@@ -6,13 +6,19 @@
                   <div class="col-sm-6">
                       <div class="top-number"><p><i class="fa fa-phone-square"></i>  </p></div>
                   </div>
-                  <div class="col-sm-6 col-xs-12">
-                        <div class="col-xs-3 pull-right">
-                            <a href="/login" class="btn btn-lg btn-success btn-block" value="Log In">Sign Up</a> 
-                        </div>
-                        <div class="col-xs-3 pull-right">
-                            <a href="/login" class="btn btn-lg btn-success btn-block" value="Log In">Log In</a> 
-                        </div>
+                  <div class="col-sm-6 col-xs-12">login
+                        {{#if currentUser}}
+                          <div class="col-xs-3 pull-right">
+                              <span class="btn btn-lg btn-success btn-block log-out" value="Log In">Log Out</span>
+                          </div>
+                        {{else}}
+                          <div class="col-xs-3 pull-right">
+                              <a href="/" class="btn btn-lg btn-success btn-block" value="Log In">Sign Up</a>
+                          </div>
+                          <div class="col-xs-3 pull-right">
+                              <a href="/login" class="btn btn-lg btn-success btn-block" value="Log In">Log In</a>
+                          </div>
+                        {{/if}}
                   </div>
               </div>
           </div><!--/.container-->

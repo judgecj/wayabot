@@ -5,6 +5,9 @@ Meteor.methods({
   findUser: function(email){
     var user = Accounts.findUserByEmail(email);
     return user;
+  },
+  changeUserName: function(username){
+    Accounts.setUsername(Meteor.userId(), username)
   }
 });
 
