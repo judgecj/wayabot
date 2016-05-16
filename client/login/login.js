@@ -1,5 +1,6 @@
 Template.login.events({
   "click .login-btn": function(event, template){
+    event.preventDefault()
     var username = template.$('.login-username').val();
     var password = template.$('.login-password').val();
     var email = template.$('.login-email').val();
@@ -21,6 +22,7 @@ Template.login.events({
     });
   },
   "click .signup-btn": function(event, template){
+    event.preventDefault()
     var username = template.$('.singunp-username').val();
     var email = template.$('.singunp-email').val();
     var password = template.$('.singunp-password').val();
