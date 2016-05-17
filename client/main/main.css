@@ -18,7 +18,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 600;
+  font-weight: 700;
   font-family: 'Open Sans', sans-serif;
   color:#4e4e4e;
 }
@@ -26,10 +26,6 @@ h6 {
 h1{
   font-size: 36px;
   color:#fff;
-}
-
-h2{
-  font-size: 20px;
 }
 
 h3{
@@ -1514,17 +1510,6 @@ ul.social_icons li  a i{
   font-style: oblique;
 }
 
-.footer {
-  background: none repeat scroll 0 0 #2E2E2E;
-  border-top: 5px solid #C52D2F;
-  height: 84px;
-  margin-top: 110px;
-}
-
-.footer_left {
-  padding: 10px;
-}
-
 .text-left {
   color: #FFFFFF;
   font-size: 12px;
@@ -2500,6 +2485,9 @@ shortcodes page css
   padding-bottom: 30px;
   color: #fff;
   background: #2e2e2e;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 }
 
 #footer a {
