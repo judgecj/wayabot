@@ -76,4 +76,8 @@ Template.login.events({
     $('#login-form-link').removeClass('active');
     $(event.currentTarget).addClass('active');
   }
-})
+});
+
+Template.login.onRendered(function(){
+  $('#login-form').validate();
+});
