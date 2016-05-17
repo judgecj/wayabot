@@ -9,6 +9,7 @@ Template.login.events({
       if(verification){
         Meteor.loginWithPassword(username, password, function(error){
           if(error){
+            console.log('error', error);
             alert('there was an error logging you in, try again');
           }
           else {
@@ -39,15 +40,22 @@ Template.login.events({
       verified: false
     }
     if(password === confirm){
+      //put loader somewhere here
       Accounts.createUser(user, function(error, x){
         if (error){
-          console.log(error, x)
+          // console.log('there was an error creating user', error, x)
+          if(error.reason.toLowerCase() == 'login forbidden'){
+            alert('Your account has been created, please check your email to verify your email address');
+            Router.go('/')
+          }
+          else{
+            alert('something went wrong, try again..try a new username or email')
+          }
         }
         else {
-          console.log(x)
-          Meteor.call('sendEmail');
+          console.log('no error creating user', x)
         }
-      })
+      });
     }
     else {
       alert('passwords don\'t match')

@@ -55,6 +55,5 @@ Template.profile.events({
 });
 
 Accounts.onResetPasswordLink(function(token, done){
-  console.log('token', token);
-  Router.go('/reset-password')
+  Router.go('/reset-password/'+token);
 });
