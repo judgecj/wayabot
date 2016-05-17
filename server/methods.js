@@ -1,6 +1,6 @@
 Meteor.methods({
-  sendEmail: function(){
-    Accounts.sendVerificationEmail(Meteor.userId(), Meteor.user().emails[0].address)
+  sendEmail: function(userId, userEmail){
+    Accounts.sendVerificationEmail(userId, userEmail)
   },
   findUser: function(email){
     var user = Accounts.findUserByEmail(email);
@@ -18,6 +18,9 @@ Meteor.methods({
 });
 
 Meteor.startup(function(){
+  Accounts.urls.resetPassword = function(token) {
+    return Meteor.absoluteUrl('reset-password/' + token);
+  };
   smtp = {
     username: process.env.email,
     password: process.env.password,
@@ -27,13 +30,15 @@ Meteor.startup(function(){
   process.env.MAIL_URL='smtp://' + encodeURIComponent(smtp.username) + ':' + encodeURIComponent(smtp.password) + '@' + encodeURIComponent(smtp.server) + ':' + smtp.port;
 });
 
-// Accounts.validateLoginAttempt(function(user){
-//   return user.methodArguments[0].verified
-// });
-
-// Accounts.validateNewUser(function(options, user){
-//   console.log('options', options);
-//   console.log('user', user);
-//   Meteor.call('sendEmail', options._id, options.emails[0].address);
-//   return true
-// });
+Accounts.validateLoginAttempt(function(user){
+  var user = user;
+  var userId = user.user._id;
+  var userEmail = user.user.emails[0].address
+  if(user.methodArguments[0].verified == false){
+    Meteor.call('sendEmail', userId, userEmail);
+    return false;
+  }
+  else {
+    return true
+  }
+});
