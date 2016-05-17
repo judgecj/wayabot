@@ -50,3 +50,8 @@ h3#username {
     margin-left: 20%;
     padding-top: 20px;
 }
+
+img#loader {
+    margin-top: -20%;
+    display: none;
+}
