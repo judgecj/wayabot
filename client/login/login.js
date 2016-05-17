@@ -77,7 +77,3 @@ Template.login.events({
     $(event.currentTarget).addClass('active');
   }
 });
-
-Template.login.onRendered(function(){
-  $('#login-form').validate();
-});
