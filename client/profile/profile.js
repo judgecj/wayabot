@@ -19,7 +19,6 @@ Template.profile.events({
     if(username != Meteor.user().username){
       Meteor.call('changeUserName', username);
     }
-<<<<<<< HEAD
   },
   "click .update-email": function(event, template){
     var newMail = template.$('.sign-email').val();
@@ -58,7 +57,4 @@ Template.profile.events({
 Accounts.onResetPasswordLink(function(token, done){
   console.log('token', token);
   Router.go('/reset-password')
-=======
-  }
->>>>>>> update user profile
 });
