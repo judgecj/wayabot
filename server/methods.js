@@ -8,6 +8,12 @@ Meteor.methods({
   },
   changeUserName: function(username){
     Accounts.setUsername(Meteor.userId(), username)
+  },
+  updateEmail: function(newEmail){
+    if(Meteor.user().emails.length != 0){
+      Accounts.removeEmail(Meteor.userId(), Meteor.user().emails[0].address);
+    }
+    Accounts.addEmail(Meteor.userId(), newEmail, true);
   }
 });
 
