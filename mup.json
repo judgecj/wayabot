@@ -12,7 +12,7 @@
       //"sshOptions": { "port" : 49154 },
       // server specific environment variables
       "env": {
-        "MONGO_URL": "mongodb://nairazone:nairazone@troup.mongohq.com:#####/nairazone"
+        "MONGO_URL": "mongodb://Easywaya:Nairazone2016@ds025762.mlab.com:25762/easywaya"
       }
     }
   ],
