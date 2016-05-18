@@ -17,34 +17,25 @@ Template.signup.events({
       verified: false
     }
     if(password === confirm){
+      //put loader somewhere here
       Accounts.createUser(user, function(error, x){
         if (error){
-          console.log(error, x)
+          // console.log('there was an error creating user', error, x)
+          if(error.reason.toLowerCase() == 'login forbidden'){
+            alert('Your account has been created, please check your email to verify your email address');
+            Router.go('/')
+          }
+          else{
+            alert('something went wrong, try again..try a new username or email')
+          }
         }
         else {
-          console.log(x)
-          Meteor.call('sendEmail');
+          console.log('no error creating user', x)
         }
-      })
+      });
     }
     else {
       alert('passwords don\'t match')
     }
-  },
-
-   "click #login-form-link": function(event, template){
-    event.preventDefault();
-    $("#login-form").delay(100).fadeIn(100);
-    $("#register-form").fadeOut(100);
-    $('#register-form-link').removeClass('active');
-    $(event.currentTarget).addClass('active');
-  },
-
-  "click #register-form-link": function(event, template){
-    event.preventDefault();
-    $("#register-form").delay(100).fadeIn(100);
-    $("#login-form").fadeOut(100);
-    $('#login-form-link').removeClass('active');
-    $(event.currentTarget).addClass('active');
   }
 })
