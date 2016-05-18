@@ -22,7 +22,7 @@ Meteor.startup(function(){
     return Meteor.absoluteUrl('reset-password/' + token);
   };
   smtp = {
-    username: process.env.email,
+    username: process.env.email,s
     password: process.env.password,
     server: 'smtp.ategsoft.net',
     port: 587
@@ -31,6 +31,7 @@ Meteor.startup(function(){
 });
 
 Accounts.validateLoginAttempt(function(user){
+  console.log('user to be logged in', user);
   var user = user;
   var userId = user.user._id;
   var userEmail = user.user.emails[0].address
