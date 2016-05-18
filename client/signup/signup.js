@@ -1,5 +1,5 @@
 Template.signup.events({
-	"click .signup-btn": function(event, template){
+	"submit #register-form": function(event, template){
     event.preventDefault()
     var password = template.$('.signup-password').val();
     var confirm = template.$('.signup-confirm').val();
@@ -20,10 +20,9 @@ Template.signup.events({
       //put loader somewhere here
       Accounts.createUser(user, function(error, x){
         if (error){
-          // console.log('there was an error creating user', error, x)
           if(error.reason.toLowerCase() == 'login forbidden'){
-            alert('Your account has been created, please check your email to verify your email address');
-            Router.go('/')
+            Session.set('signupSuccessful', true);
+            $('#register-form')[0].reset();
           }
           else{
             alert('something went wrong, try again..try a new username or email')
@@ -38,4 +37,20 @@ Template.signup.events({
       alert('passwords don\'t match')
     }
   }
+});
+
+Template.signup.helpers({
+  signupSuccessful: function(){
+    return Session.get('signupSuccessful');
+  }
+});
+
+Template.signup.onRendered( function() {
+  $('#register-form-link').addClass('active');
+  Session.set('signupSuccessful', false);
+  $("#register-form").validate();
+});
+
+Template.signup.onDestroyed(function(){
+  $('#register-form-link').removeClass('active');
 })
