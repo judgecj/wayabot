@@ -19,8 +19,6 @@ Template.signup.events({
     if(password === confirm){
       //put loader somewhere here
       Accounts.createUser(user, function(error, x){
-        console.log('error creating user', error);
-        console.log('user was created', x);
         if (error){
           if(error.reason.toLowerCase() == 'login forbidden'){
             Session.set('signupSuccessful', true);
@@ -31,7 +29,7 @@ Template.signup.events({
           }
         }
         else {
-          console.log('no error creating user', x)
+          // console.log('no error creating user', x)
         }
       });
     }
