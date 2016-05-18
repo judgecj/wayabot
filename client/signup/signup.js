@@ -1,4 +1,4 @@
-Template.login.events({
+Template.signup.events({
 	"click .signup-btn": function(event, template){
     event.preventDefault()
     var password = template.$('.signup-password').val();

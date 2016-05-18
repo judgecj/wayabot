@@ -22,7 +22,13 @@ Template.login.events({
       }
     });
   },
+  "click .signup-btns": function(event, template){
+    event.preventDefault()
+    console.log('why')
+  },
   "click .signup-btn": function(event, template){
+    console.log('dsfdskfjsdf sdklfdsfkjsdf')
+    return
     event.preventDefault()
     var password = template.$('.signup-password').val();
     var confirm = template.$('.signup-confirm').val();
@@ -41,6 +47,7 @@ Template.login.events({
     }
     if(password === confirm){
       //put loader somewhere here
+      console.log('passwords match')
       Accounts.createUser(user, function(error, x){
         if (error){
           // console.log('there was an error creating user', error, x)
