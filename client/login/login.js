@@ -25,6 +25,11 @@ Template.login.events({
         alert('You need to verify your email');
       }
     });
+  },
+
+  "click #olvidado": function(event, template){
+    event.preventDefault();
+    $('div#form-olvidado').toggle('500');
   }
 });
 
