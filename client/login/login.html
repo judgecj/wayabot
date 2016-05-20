@@ -1,6 +1,29 @@
 <template name="login">
   <form id="login-form">
-    <h2>Welcome Back! Please Sign In</h2>
+    <h3>Welcome Back! Please Sign In</h3>
+      <div class="omb_login">
+        <div class="row omb_socialButtons">
+              <div class="col-sm-4">
+                <a href="#" class="btn btn-lg btn-block omb_btn-facebook">
+                  <i class="fa fa-facebook visible-xs"></i>
+                  <span class="hidden-xs">Facebook</span>
+                </a>
+              </div>
+              <div class="col-sm-4">
+                <a href="#" class="btn btn-lg btn-block omb_btn-twitter">
+                  <i class="fa fa-twitter visible-xs"></i>
+                  <span class="hidden-xs">Twitter</span>
+                </a>
+              </div>  
+              <div class="col-sm-4">
+                <a href="#" class="btn btn-lg btn-block omb_btn-google">
+                  <i class="fa fa-google-plus visible-xs"></i>
+                  <span class="hidden-xs">Google+</span>
+                </a>
+              </div>  
+        </div>
+      </div>
+
     <hr class="colorgraph">
     <div class="form-group">
       <input type="username" name="username" id="username" class="form-control input-lg login-username required" placeholder="Username">
@@ -12,9 +35,13 @@
       <input type="password" name="password" id="password" class="form-control input-lg login-password required" placeholder="Password">
     </div>
     <hr class="colorgraph">
+    <br>
     <div class="row">
-      <div class="col-xs-12">
-        <input type="submit" class="btn btn-lg btn-success btn-block login-btn" value="SUBMIT">
+      <div class="col-xs-6">
+        <input type="submit" class="btn btn-lg btn-success btn-block login-btn" value="Submit">
+      </div>
+       <div class="col-xs-6">
+        <input type="submit" class="btn btn-lg btn-success btn-block login-btn" value="Forgot Password?">
       </div>
     </div>
   </form>
