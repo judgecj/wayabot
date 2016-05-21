@@ -2,9 +2,6 @@
   // Server authentication info
   "servers": [
     {
-      "host": "ftp.nairazone.com",
-      "username": "nairazone",
-      "password": "*8((7XCt1056!!",
       // or pem file (ssh based authentication)
       // WARNING: Keys protected by a passphrase are not supported
       //"pem": "~/.ssh/id_rsa"
@@ -12,7 +9,7 @@
       //"sshOptions": { "port" : 49154 },
       // server specific environment variables
       "env": {
-        "MONGO_URL": "mongodb://Easywaya:Nairazone2016@ds025762.mlab.com:25762/easywaya"
+        "MONGO_URL": ""
       }
     }
   ],
