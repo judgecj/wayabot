@@ -79,3 +79,17 @@ img#loader {
 .filterable .filters input[disabled]:-ms-input-placeholder {
     color: #333;
 }
+
+.orange-circle-button {
+  border: .5em solid #E84D0E;
+  font-size: 1em;
+  line-height: 1.1em;
+  color: #ffffff;
+  background-color: #e84d0e;
+  margin: auto;
+  border-radius: 50%;
+  height: 7em;
+  width: 7em;
+  position: relative;
+}
+
