@@ -1,0 +1,28 @@
+<template name="leaderboard">
+  <div class="tab-pane" id="fourth">
+    <hr class="colorgraph">
+    <button class="btn btn-success">Leaderboard for Today</button>
+    <div class="well">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Username</th>
+            <th>Country</th>
+            <th style="width: 36px;">Amount Bidded(Naira)</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each bidders}}
+            <tr>
+              <td>{{@index}}</td>
+              <td>{{author.username}}</td>
+              <td>{{author.profile.country}}</td>
+              <td>{{amount}}</td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</template>
