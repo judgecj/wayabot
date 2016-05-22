@@ -1,6 +1,15 @@
 Template.profile.helpers({
   user: function(){
     return Meteor.user();
+  },
+  biddingValue: function(){
+    // var initialBid = Bids.find({}, {
+    //   sort: {
+    //     createdAt: -1
+    //   }
+    // });
+    // return initialBid.fetch()[0].amount;
+    return Session.get('highestBid') || 256;
   }
 });
 
@@ -51,6 +60,13 @@ Template.profile.events({
         alert('please check your mail for a reset password link')
       }
     })
+  },
+  "click .userBid": function(event, template){
+    event.preventDefault();
+    var bid = {
+      amount: Number(template.$('.userBidValue').val())
+    };
+    Meteor.call('newBid', bid);
   }
 });
 

@@ -1,142 +1,93 @@
 <template name="profile">
-
-    <div class="row">
-
-        <div class="col-md-8 user-profile">
-
-          <!-- tabs left -->
-            <div class="tabbable tabs-left">
-                <ul class="nav nav-tabs">
-                    <div class="profile-userpic">
-                        <img src="https://d2kym60b0ykakr.cloudfront.net/avatar/thisnthat-4ef99d1eb778d221497b8cd4ce425519ed6e604fe28d3c6f4e04e1aa500/avatar.my-profile-pic1.png" class="img-responsive" alt="">
-                        <h3 id="username"> {{user.username}} </h3>
-                    </div>
-                    <li class="active"><a href="#second" data-toggle="tab">My Profile</a></li>
-                    <li><a href="#fourth" data-toggle="tab">View Leaderboard</a></li>
-                    <li><a href="#first" data-toggle="tab">Change Email</a></li>
-                    <li><a href="#third" data-toggle="tab">Change Password</a></li>
-                </ul>
-                <div class="tab-content col-md-6 user-profile">
-                 <div class="tab-pane" id="first">
-                    <div class="form-group">
-                        <input type="email" name="email" id="email" class="form-control input-lg sign-email" placeholder="Email Address" value="{{user.emails.[0].address}}">
-                    </div>
-                    <hr class="colorgraph">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <input type="submit" class="btn btn-lg btn-success btn-block update-email" value="Save Changes">
-                        </div>
-                    </div>
-                 </div>
-                 <div class="tab-pane active" id="second">
-                    <div class="form-group">
-                        <input type="username" name="username" id="username" class="form-control input-lg signup-username" placeholder="Username" value="{{user.username}}">
-                    </div>
-                    <h2>Business Details</h2>
-                    <hr class="colorgraph">
-                    <div class="form-group">
-                        <input type="businessname" name="businessname" id="businessname" class="form-control input-lg signup-businessname" placeholder="Business name" value="{{user.profile.businessName}}">
-                    </div>
-                    <div class="form-group">
-                        <input type="regnum" name="regnum" id="regnum" class="form-control input-lg signup-regnum" placeholder="Business Registration Number" value="{{user.profile.regNum}}">
-                    </div>
-                    <div class="form-group">
-                        <input type="country" name="country" id="country" class="form-control input-lg signup-country" placeholder="Country" value="{{user.profile.country}}">
-                    </div>
-                    <hr class="colorgraph">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <input type="submit" class="btn btn-lg btn-success btn-block update-profile" value="Save Changes">
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-                        <div class="row">
-                            <div class="col-md-12">
-                                Current Value for today!!!
-                                <button class="btn btn-default orange-circle-button" href=""> N256 <span class="orange-circle-greater-than"></span></button>
-                            </div>   
-                                <div class="form-group">
-                                    <label for="validate-optional">Input your Bidding value for today in Naira</label>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" name="validate-optional" id="validate-optional" placeholder="Bidding Value">
-                                        <span class="input-group-addon info"><span class="glyphicon glyphicon-asterisk"></span></span>
-                                    </div>
-                                </div>
-                                
-                                <button type="submit" class="btn btn-success col-xs-12">Submit</button>
-                        </div>
-                 </div>
-                 <div class="tab-pane" id="third">
-                    <hr class="colorgraph">
-                    <div class="form-group">
-                        <input type="password" name="password" id="password" class="form-control input-lg current-password" placeholder="Current Password">
-                    </div>
-                    <div class="form-group">
-                        <input type="password" name="password" id="password" class="form-control input-lg new-password" placeholder="New Password">
-                    </div>
-                    <div class="form-group">
-                        <input type="password" name="password" id="password" class="form-control input-lg confirm-new" placeholder="Confirm new Password">
-                    </div>
-                    <img src="../images/ring.gif" id="loader">
-                    <div class="row">
-                        <div class="col-xs-6">
-                            <input type="submit" class="btn btn-lg btn-success btn-block update-password" value="Save Changes">
-                        </div>
-                        <div class="col-xs-6">
-                            <input type="submit" class="btn btn-lg btn-success btn-block forgot-password" value="Forgot Password?">
-                        </div>
-                    </div>
-                 </div>
-
-                 <div class="tab-pane" id="fourth">
-                    <hr class="colorgraph">
-                    <button class="btn btn-success">Leaderboard for Today</button>
-                    <div class="well">
-                        <table class="table">
-                          <thead>
-                            <tr>
-                              <th>#</th>
-                              <th>Username</th>
-                              <th>Country</th>
-                              <th style="width: 36px;">Amount Bidded(Naira)</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>1</td>
-                              <td>Mark</td>
-                              <td>Nigeria</td>
-                              <td>275</td>
-                            </tr>
-                            <tr>
-                              <td>2</td>
-                              <td>Ashley</td>
-                              <td>Ghana</td>
-                              <td>234</td>
-                            </tr>
-                            <tr>
-                              <td>3</td>
-                              <td>Audrey</td>
-                              <td>Nigeria</td>
-                              <td>212</td>
-                            </tr>
-                            <tr>
-                              <td>4</td>
-                              <td>John</td>
-                              <td>Nigeria</td>
-                              <td>203</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                    </div>
-                 </div>
-                </div>
+  <div class="row">
+    <div class="col-md-8 user-profile">
+      <!-- tabs left -->
+      <div class="tabbable tabs-left">
+        <ul class="nav nav-tabs">
+          <div class="profile-userpic">
+            <img src="https://d2kym60b0ykakr.cloudfront.net/avatar/thisnthat-4ef99d1eb778d221497b8cd4ce425519ed6e604fe28d3c6f4e04e1aa500/avatar.my-profile-pic1.png" class="img-responsive" alt="">
+            <h3 id="username"> {{user.username}} </h3>
+          </div>
+          <li class="active"><a href="#second" data-toggle="tab">My Profile</a></li>
+          <li><a href="#fourth" data-toggle="tab">View Leaderboard</a></li>
+          <li><a href="#first" data-toggle="tab">Change Email</a></li>
+          <li><a href="#third" data-toggle="tab">Change Password</a></li>
+        </ul>
+        <div class="tab-content col-md-6 user-profile">
+          <div class="tab-pane" id="first">
+            <div class="form-group">
+              <input type="email" name="email" id="email" class="form-control input-lg sign-email" placeholder="Email Address" value="{{user.emails.[0].address}}">
             </div>
-          <!-- /tabs -->
-
+            <hr class="colorgraph">
+            <div class="row">
+              <div class="col-xs-12">
+                <input type="submit" class="btn btn-lg btn-success btn-block update-email" value="Save Changes">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane active" id="second">
+            <div class="form-group">
+              <input type="username" name="username" id="username" class="form-control input-lg signup-username" placeholder="Username" value="{{user.username}}">
+            </div>
+            <h2>Business Details</h2>
+            <hr class="colorgraph">
+            <div class="form-group">
+              <input type="businessname" name="businessname" id="businessname" class="form-control input-lg signup-businessname" placeholder="Business name" value="{{user.profile.businessName}}">
+            </div>
+            <div class="form-group">
+              <input type="regnum" name="regnum" id="regnum" class="form-control input-lg signup-regnum" placeholder="Business Registration Number" value="{{user.profile.regNum}}">
+            </div>
+            <div class="form-group">
+              <input type="country" name="country" id="country" class="form-control input-lg signup-country" placeholder="Country" value="{{user.profile.country}}">
+            </div>
+            <hr class="colorgraph">
+            <div class="row">
+              <div class="col-xs-12">
+                <input type="submit" class="btn btn-lg btn-success btn-block update-profile" value="Save Changes">
+              </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+              <div class="col-md-12">
+                Current Value for today!!!
+                <button class="btn btn-default orange-circle-button" href=""> N{{biddingValue}} <span class="orange-circle-greater-than"></span></button>
+              </div>
+              <div class="form-group">
+                <label for="validate-optional">Input your Bidding value for today in Naira</label>
+                <div class="input-group">
+                  <input type="text" class="form-control userBidValue" name="validate-optional" id="validate-optional" placeholder="Bidding Value">
+                  <span class="input-group-addon info"><span class="glyphicon glyphicon-asterisk"></span></span>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-success col-xs-12 userBid">Submit</button>
+            </div>
+          </div>
+          <div class="tab-pane" id="third">
+            <hr class="colorgraph">
+            <div class="form-group">
+              <input type="password" name="password" id="password" class="form-control input-lg current-password" placeholder="Current Password">
+            </div>
+            <div class="form-group">
+              <input type="password" name="password" id="password" class="form-control input-lg new-password" placeholder="New Password">
+            </div>
+            <div class="form-group">
+              <input type="password" name="password" id="password" class="form-control input-lg confirm-new" placeholder="Confirm new Password">
+            </div>
+            <img src="../images/ring.gif" id="loader">
+            <div class="row">
+              <div class="col-xs-6">
+                <input type="submit" class="btn btn-lg btn-success btn-block update-password" value="Save Changes">
+              </div>
+              <div class="col-xs-6">
+                <input type="submit" class="btn btn-lg btn-success btn-block forgot-password" value="Forgot Password?">
+              </div>
+            </div>
+          </div>
+          {{> leaderboard}}
         </div>
+      </div>
+      <!-- /tabs -->
     </div>
-
-
+  </div>
 </template>
