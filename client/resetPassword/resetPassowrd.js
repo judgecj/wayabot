@@ -9,7 +9,8 @@ Template.resetPassword.events({
           console.log(error)
         }
         else {
-          alert('Passowrd changed succesfully')
+          alert('Passowrd changed succesfully');
+          Router.go('/profile')
         }
       });
     }

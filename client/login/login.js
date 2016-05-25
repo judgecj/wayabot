@@ -30,6 +30,21 @@ Template.login.events({
   "click #olvidado": function(event, template){
     event.preventDefault();
     $('div#form-olvidado').toggle('500');
+  },
+
+  "submit #forgot-password": function(event, template){
+    event.preventDefault();
+    var options = {
+      email: template.$('.reset-email').val()
+    };
+    Accounts.forgotPassword(options, function(err){
+      if(err){
+        alert('error occured, try again');
+      }
+      else{
+        alert('reset email sent, check your email for further instructions')
+      }
+    });
   }
 });
 
