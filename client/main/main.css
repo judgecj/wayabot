@@ -16,11 +16,15 @@ body {
 h1,
 h2,
 h3,
-h4,
 h5,
 h6 {
   font-weight: 700;
   font-family: 'Open Sans', sans-serif;
+  color:#4e4e4e;
+}
+
+h4{
+  font-size: 1.35em;
   color:#4e4e4e;
 }
 
@@ -36,7 +40,6 @@ h2{
 h3{
   font-size: 16px;
   color: #787878;
-  font-weight: 400;
   line-height: 24px;
 }
 
