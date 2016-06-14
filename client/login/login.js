@@ -45,6 +45,20 @@ Template.login.events({
         alert('reset email sent, check your email for further instructions')
       }
     });
+  },
+
+  "click .facebook-login": function(event, template){
+    Meteor.loginWithFacebook({
+      requestPermissions: ['email']
+    }, function(error){
+      if(err){
+        alert('there was an error', error);
+      }
+      else {
+        console.log('done');
+        Router.go('/profile');
+      }
+    });
   }
 });
 
