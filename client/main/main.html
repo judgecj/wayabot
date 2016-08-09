@@ -1,13 +1,67 @@
 <template name="main">
+
   <head>
     <title>EasyWaya</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700|Open+Sans|Lato|Source+Sans+Pro' rel='stylesheet' type='text/css'>
   </head>
-  <body class="homepage">
+
+  <body>
+
     {{> header}}
 
-    {{> yield}}
+    <section>
+      <div class="headerSpace">
+      </div>
+    </section>
+
+    <div id="wrapper">
+      <div id="sidebar-wrapper">
+        <nav id="spy">
+          <ul class="sidebar-nav nav">
+            <li>
+              <a href="/send" data-scroll>
+                <span><i class="material-icons">send</i>Send</span>
+              </a>
+            </li>
+            <li>
+              <a href="/buy" data-scroll>
+                <span><i class="material-icons">payment</i>Buy</span>
+              </a>
+            </li>
+            <li class="activeLink">
+              <a href="/confirmation" data-scroll>
+                <span><i class="material-icons">transfer_within_a_station</i>Transfer</span>
+              </a>
+            </li>
+            <li>
+              <a href="/payment" data-scroll>
+                <span><i class="material-icons">people</i>Recipients</span>
+              </a>
+            </li>
+            <li>
+              <a href="/profile" data-scroll>
+                <span><i class="material-icons">account_circle</i></span><span>Profile</span>
+              </a>
+            </li>
+            <li>
+              <a href="#logout" data-scroll>
+                <span><i class="material-icons">eject</i>Logout</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Page content -->
+      <div id="page-content-wrapper" class="container">
+        <div class="page-content inset col-lg-offset-1 col-lg-10" data-spy="scroll" data-target="#spy">
+          {{> yield}}
+        </div>
+      </div>
+      <!-- Page Content -->
+
+    </div>
+
   </body>
-  <footer>
-    {{> footer}}
-  </footer>
 </template>
