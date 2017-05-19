@@ -1,0 +1,31 @@
+<template name="changeEmail">
+  <div role="tabpanel" class="tab-pane fade" id="changeEmail">
+    <div class="panel customPanel padded">
+      <div class="personalInfoBlock">
+        <h4>Change Email</h4>
+        <hr>
+        <div>
+          <br>
+          <form action="index.html" method="post">
+            <div class="row">
+              <div class="form-group col-lg-10">
+                <label for="oldEmailAddress">Old Email address</label>
+                <input type="email" class="form-control" id="oldEmailAddress" placeholder="Email" value="{{currentUser.emails.[0].address}}" disabled>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="form-group col-lg-10">
+                <label for="newEmailAddress">New Email address</label>
+                <input type="email" class="form-control focused" id="newEmailAddress" placeholder="Email">
+              </div>
+            </div>
+            <div class="buttonHolder">
+              <button type="submit" class="ghostButton invertedGreen paddedBtn updateEmail">Update Email</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

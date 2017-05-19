@@ -1,162 +1,479 @@
 <template name="buy">
   <section>
-    <!-- <div class="row">
-      <div class="col-md-9">
-          <div class="transparentCard">
-          <div class="col-md-2">
-            <div class="circle sm">
-              Rate
-            </div>
-          </div> -->
-    <div class="marginSm">
-      <div class="hCentered customLabel">
-        <p>
-          Available
+    <form id="sectional">
+      <fieldset>
+        <p class="fancy-group">
+          <span class="circularTextHolder">&nbsp;CC&nbsp;</span>
+          <span>Currency Converter (Buy Page)</span>
         </p>
-        <div class="circle lg">
-          $10k
-        </div>
-      </div>
-      <div class="row marginSm">
-        <div class="col-md-4 hCentered customLabel pullUp">
-          <p>
-            Min Bid Rate
-          </p>
-          <div class="circle md">
-            N300
-          </div>
-        </div>
-        <div class="col-md-4 hCentered customLabel pushDown">
-          <p>
-            Time Remaining
-          </p>
-          <div class="circle md">
-            2HRS
-          </div>
-        </div>
-        <div class="col-md-4 hCentered customLabel pullUp">
-          <p>
-            Suggested
-          </p>
-          <div class="circle md">
-            N345
-          </div>
-        </div>
-      </div>
-    </div>
+        <div class="form-section marginTopSm">
+          <section>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="transparentCard">
 
-    <div class="locationFlag">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="row verticallyCenteredContainer">
-            <div class="col-sm-8 verticallyCenteredContainer">
+                  <div class="row border-between" id="currencyConverter">
+                    <div class="col-md-6">
+                      <div class="dropdown currencySelector">
+                        <button class="btn currencySelectBtn dropdown-toggle" type="button" data-toggle="dropdown"><span class="flagThumb"><img src="http://res.cloudinary.com/doy1ofzki/image/upload/v1477776066/US_tqdtak.png" /></span>USD
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="material-icons">keyboard_arrow_down</i></button>
+                        <ul class="dropdown-menu">
+                          <li><a href="#"><span class="flagThumb"><img src="http://res.cloudinary.com/doy1ofzki/image/upload/v1477776066/US_tqdtak.png" /></span>USD</a></li>
+                          <li><a href="#"><span class="flagThumb"><img src="http://res.cloudinary.com/doy1ofzki/image/upload/v1477776066/EU_shvsqg.png" /></span>EUR</a></li>
+                          <li><a href="#"><span class="flagThumb"><img src="http://res.cloudinary.com/doy1ofzki/image/upload/v1477776066/GB_z9odrt.png" /></span>GBP</a></li>
+                          <li><a href="#"><span class="flagThumb"><img src="http://res.cloudinary.com/doy1ofzki/image/upload/v1478221319/NG_rpwbma.png" /></span>NGN</a></li>
+                        </ul>
+                      </div>
+                      <div>
+                        <input type="number" class="form-control currencyValueInputForm" id="originCountry" placeholder="1, 000">
+                        <br />
+                        <label for="originCountry" class="conversionFormLabel">&nbsp;&nbsp;You send</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="">
+                        <div class="verticalLine">
+                          <div class="dropdown currencySelector">
+                            <button class="btn currencySelectBtn dropdown-toggle" type="button" data-toggle="dropdown"><span class="flagThumb"><img src="http://res.cloudinary.com/doy1ofzki/image/upload/v1477776066/GB_z9odrt.png" /></span>GBP
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="material-icons">keyboard_arrow_down</i></button>
+                            <ul class="dropdown-menu">
+                              <li><a href="#"><span class="flagThumb"><img src="http://res.cloudinary.com/doy1ofzki/image/upload/v1477776066/US_tqdtak.png" /></span>USD</a></li>
+                              <li><a href="#"><span class="flagThumb"><img src="http://res.cloudinary.com/doy1ofzki/image/upload/v1477776066/EU_shvsqg.png" /></span>EUR</a></li>
+                              <li><a href="#"><span class="flagThumb"><img src="http://res.cloudinary.com/doy1ofzki/image/upload/v1477776066/GB_z9odrt.png" /></span>GBP</a></li>
+                              <li><a href="#"><span class="flagThumb"><img src="http://res.cloudinary.com/doy1ofzki/image/upload/v1478221319/NG_rpwbma.png" /></span>NGN</a></li>
+                            </ul>
+                          </div>
+                          <div>
+                            <input type="number" class="form-control currencyValueInputForm" id="originCountry" placeholder="2, 345">
+                            <br />
+                            <label for="originCountry" class="conversionFormLabel">&nbsp;&nbsp;Recipient Gets</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <br>
+                  <div>
+                    <nav class="form-section-nav">
+                      <span class="ghostButton invertedGreen lg form-nav-next">Continue</span>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </fieldset>
+
+
+
+
+
+      <fieldset>
+        <p class="fancy-group">
+          <span class="circularTextHolder">&nbsp;SR&nbsp;</span>
+          <span>Select Recipient</span>
+        </p>
+        <div class="form-section marginTopSm">
+          <section>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="transparentCard">
+
+                  <div class="radio">
+                    <label><input type="radio" name="optradio">Recipient 1</label>
+                  </div>
+                  <div class="radio">
+                    <label><input type="radio" name="optradio">Recipient 2</label>
+                  </div>
+                  <div class="radio">
+                    <label><input type="radio" name="optradio">Recipient 3</label>
+                  </div>
+                  <div class="radio">
+                    <label><input type="radio" name="optradio">Recipient 4</label>
+                  </div>
+                  <button type="button" class="btn btn-link" data-toggle="modal" data-target="#addRecipientModal">
+                   Add New Recipient
+                  </button>
+                  <br />
+                  <br />
+                  <div>
+                    <nav class="form-section-nav text-center">
+                      <span class="ghostButton invertedGreen lg form-nav-prev">Back</span>&nbsp;&nbsp;&nbsp;
+                      <span class="ghostButton invertedGreen lg form-nav-next">Continue</span>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <p class="fancy-group">
+          <span class="circularTextHolder">&nbsp;PI&nbsp;</span>
+          <span>Payment Information</span>
+        </p>
+        <div class="form-section marginTopSm">
+          <section>
+            <div class="transparentCard">
+              <div class="row">
+                <div class="col-lg-2">
+                  <div class="circularTextHolder lg vCentered">
+                    <p>
+                      Payment Info
+                    </p>
+                  </div>
+                </div>
+                <div class="col-lg-10">
+                  <div class="form-group">
+                    <label for="payment_info">Payment Info</label>
+                    <input type="text" class="form-control" id="payment_info">
+                  </div>
+                  <p class="text-center vPaddingSm">
+                    <span class="circularTextHolder">Or</span>
+                    <span>&nbsp;</span>
+                  </p>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label for="debit_card">Debit Card</label>
+                        <input type="text" class="form-control" id="debit_card">
+                      </div>
+                      <div class="form-group">
+                        <label for="first_name">First Name</label>
+                        <input type="text" class="form-control" id="first_name">
+                      </div>
+                      <div class="form-group">
+                        <label for="cc_number">Debit Card Number</label>
+                        <input type="text" class="form-control" id="cc_number">
+                      </div>
+                      <div class="form-group">
+                        <label for="zip_code">Zip Code</label>
+                        <input type="text" class="form-control" id="zip_code">
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label for="account">Account</label>
+                        <input type="text" class="form-control" id="account">
+                      </div>
+                      <div class="form-group">
+                        <label for="last_name">Last Name</label>
+                        <input type="text" class="form-control" id="last_name">
+                      </div>
+                      <div class="form-group">
+                        <label for="expiry_date">Expiry Date</label>
+                        <input type="text" class="form-control" id="expiry_date">
+                      </div>
+                      <div class="form-group">
+                        <label for="ccv">CCV</label>
+                        <input type="text" class="form-control" id="ccv">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br />
+              <nav class="form-section-nav text-center">
+                <span class="ghostButton invertedGreen lg form-nav-prev">Back</span>&nbsp;&nbsp;&nbsp;
+                <span class="ghostButton invertedGreen lg form-nav-next">Continue</span>
+              </nav>
+            </div>
+          </section>
+        </div>
+      </fieldset>
+      <fieldset>
+        <p class="fancy-group">
+          <span class="circularTextHolder"> RT </span>
+          <span>Review Trasaction</span>
+        </p>
+        <div class="form-section marginTopSm">
+          <section>
+            <div class="row">
+              <div class="col-lg-9">
+                <div class="transparentCard">
+                  <div class="circularTextHolder md vCentered">
+                    Rate
+                  </div>
+                  <p style="margin-bottom:30px">&nbsp;</p>
+                  <div class="locationFlag">
+                    <div class="row">
+                      <div class="col-sm-12 clearPadding">
+                        <div class="row">
+                          <div class="col-sm-8">
+                            <div class="thumbnailHolder col-sm-4">
+                              <img src="http://res.cloudinary.com/doy1ofzki/image/upload/v1468780430/usa_aqhlhr.png" alt="" class="responsiveImg" />
+                            </div>
+                            <div class="col-sm-8 clearPadding">
+                              UNITED STATES
+                            </div>
+                          </div>
+                          <div class="col-sm-4">
+                            USD 100.00
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <hr>
+                  </div>
+                  <div class="locationFlag">
+                    <div class="row">
+                      <div class="col-sm-12 clearPadding">
+                        <div class="row">
+                          <div class="col-sm-8">
+                            <div class="thumbnailHolder col-sm-4">
+                              <img src="http://res.cloudinary.com/doy1ofzki/image/upload/v1468782175/nigeria_fctx41.png" alt="" class="responsiveImg" />
+                            </div>
+                            <div class="col-sm-8 clearPadding">
+                              NIGERIA
+                            </div>
+                          </div>
+                          <div class="col-sm-4">
+                            NGN 330,000.00
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <hr>
+                  </div>
+                  <div class="locationFlag">
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="row">
+                          <div class="col-sm-8">
+                            <p>
+                              Fee
+                            </p>
+                          </div>
+                          <div class="col-sm-4">
+                            USD 2.00
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <hr>
+                  </div>
+                  <div class="locationFlag">
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="row">
+                          <div class="col-sm-8">
+                            <p>
+                              Total
+                            </p>
+                          </div>
+                          <div class="col-sm-4">
+                            USD 102.00
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <hr>
+                  </div>
+                  <br>
+                  <div class="text-center">
+                    <nav class="form-section-nav">
+                      <span class="ghostButton invertedGreen lg form-nav-prev">Back</span>
+                      <span class="ghostButton invertedGreen lg form-nav-next">Continue</span>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 marginTopLg paddingMd">
+                <p class="iconPrefixedText">
+                  <span class="circularTextHolder">&nbsp;&nbsp;!&nbsp;&nbsp;</span>
+                  <span>&nbsp;</span>
+                </p>
+                <br>
+                <p>Note:</p>
+                <p>Estimated Delivery</p>
+                <hr>
+                <p>2-3 days</p>
+                <hr>
+                <p>June 15, 2016</p>
+                <hr>
+              </div>
+            </div>
+          </section>
+        </div>
+      </fieldset>
+      <fieldset>
+        <p class="fancy-group">
+          <span class="circularTextHolder">CR</span>
+          <span>Confirmation Receipt</span>
+        </p>
+        <div class="form-section marginTopSm">
+          <section>
+            <div class="transparentCard">
               <p>
-                U.S.D
+                <span class="circularTextHolder">RD</span>
+                <span>Recipient Details</span>
               </p>
-            </div>
-            <div class="col-sm-4 verticallyCenteredContainer">
-              USD 1000.00
-            </div>
-          </div>
-        </div>
-      </div>
-      <hr>
-    </div>
-
-    <div class="locationFlag">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="row verticallyCenteredContainer">
-            <div class="col-sm-8 verticallyCenteredContainer">
+              <hr>
               <p>
-                BID RATE
+                <span class="circularTextHolder">PI&nbsp;</span>
+                <span>Payment Info</span>
               </p>
+              <hr>
+              <div class="row">
+                <div class="col-lg-2">
+                  <div class="circularTextHolder lg vCentered">
+                    <p>
+                      Review Transaction
+                    </p>
+                  </div>
+                </div>
+                <div class="col-lg-10">
+                  <h4>Confirm Transaction</h4>
+                  <table id="transactionDetailsTable">
+                    <tr>
+                      <td>
+                        Sending:
+                      </td>
+                      <td>
+                        $100
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Fee:
+                      </td>
+                      <td>
+                        Fee
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Total:
+                      </td>
+                      <td>
+                        $102.00
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <b>Account Info:</b>
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Bank Account:
+                      </td>
+                      <td>
+                        1234 5678 90
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <b>Recipient Info:</b>
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Name:
+                      </td>
+                      <td>
+                        Paul Ategie
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Bank:
+                      </td>
+                      <td>
+                        GT Bank
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Account Number:
+                      </td>
+                      <td>
+                        056432
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Amount:
+                      </td>
+                      <td>
+                        NGN 30,000
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
             </div>
-            <div class="col-sm-4 verticallyCenteredContainer">
-              NGN 310.00
-            </div>
-          </div>
+            <nav class="form-section-nav">
+              <div class="submitButtonHolder text-center">
+                <span class="ghostButton invertedGreen lg form-nav-prev">Prev</span> &nbsp;&nbsp;&nbsp;
+                <span class="ghostButton invertedGreen lg form">Confirm</span>
+              </div>
+            </nav>
+          </section>
         </div>
-      </div>
-      <hr>
-    </div>
-
-    <div class="locationFlag">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="row verticallyCenteredContainer">
-            <div class="col-sm-8 verticallyCenteredContainer">
-              <p>
-                TOTAL (NGN)
-              </p>
-            </div>
-            <div class="col-sm-4 verticallyCenteredContainer">
-              USD 310.00
-            </div>
-          </div>
-        </div>
-      </div>
-      <hr>
-    </div>
-
-    <br>
-
-    <div>
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="row verticallyCenteredContainer">
-            <div class="col-sm-8 verticallyCenteredContainer">
-              <p>
-                Fee
-              </p>
-            </div>
-            <div class="col-sm-4 verticallyCenteredContainer">
-              NGN 1000.00
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div>
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="row verticallyCenteredContainer">
-            <div class="col-sm-8 verticallyCenteredContainer">
-              <p>
-                Total
-              </p>
-            </div>
-            <div class="col-sm-4 verticallyCenteredContainer">
-              NGN 311,000.00
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <br>
-
-    <div class="postInfo">
-      <div class="text-center marginMd">
-        <a href="#" class="ghostButton invertedBlue lg">Continue</a>
-      </div>
-    </div>
-
-    <div class="col-lg-3 lgMarginTop mediumPadding">
-      <p class="iconPrefixedText">
-        <span class="circularTextHolder">&nbsp;&nbsp;!&nbsp;&nbsp;</span>
-        <span>&nbsp;</span>
-      </p>
-      <br>
-      <p>Note:</p>
-      <p>Available Amount &nbsp;&nbsp;$10k</p>
-      <hr>
-      <p>Min Amount &nbsp;&nbsp;$100 </p>
-      <hr>
-      <p>Min Bid Rate &nbsp;&nbsp;N310</p>
-      <hr>
-    </div>
-
+      </fieldset>
+    </form>
   </section>
+
+  <div class="modal fade" id="addRecipientModal" tabindex="-1" role="dialog" aria-labelledby="addRecipientModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h3 class="modal-title text-center" id="addRecipientModalLabel">Add New Recipient</h3>
+        </div>
+        <div class="modal-body">
+          <div class="sidePadding">
+            <br />
+            <br />
+            <div class="form-group">
+              <label for="name">Recipients Name</label>
+              <input type="text" class="form-control" id="name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email">
+            </div>
+            <br />
+            <h4>Bank Details</h4>
+            <hr />
+            <label for="bankSelector">SELECT BANK</label>
+            <select class="form-control" id="bankSelector">
+              <option>Bank 1</option>
+              <option>Bank 2</option>
+              <option>Bank 3</option>
+              <option>Bank 4</option>
+            </select>
+            <div class="form-group">
+              <label for="accountNumber">IBAN</label>
+              <input type="text" class="form-control" id="accountNumber" placeholder="DE89370400440532013000">
+            </div>
+            <div class="form-group">
+                <label for="routingNumber">Routing Number</label>
+                <input type="text" class="form-control" id="routingNumber" placeholder="101010101">
+              </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn ghostButton invertedRed" data-dismiss="modal">Close</button>
+          <button type="button" class="btn ghostButton invertedGreen">+ Add Recipient</button>
+          <br />
+          <br />
+        </div>
+      </div>
+    </div>
+  </div>
 </template>

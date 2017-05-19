@@ -1,4 +1,5 @@
 <template name="signupModal">
+  {{> bertAlert}}
   <div class="modal fade">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -7,36 +8,46 @@
           <h3 class="text-center">Sign up for EasyWaya</h3>
         </div>
         <div class="modal-body">
-          <div class="mdVPadding">
-            <form>
+          <div class="">
+            <form class="signupForm">
               <div class="row">
-                <div class="col-lg-6 PaddingTop">
-                  <button type="button" class="btn btn-block socialBtn google">Connect with Google</button>
-                  <br>
-                  <br>
-                  <button type="button" class="btn btn-block socialBtn facebook">Connect with Facebook</button>
-                </div>
-                <div class="col-lg-6 borderLeft PaddingTop">
+                <div class="sidePadding">
                   <div class="form-group">
+                    <label class="authformLabel" for="#emailAddressInput">Email</label>
                     <input type="email" class="form-control signupInput" id="emailAddressInput" placeholder="Your email address">
                   </div>
-                  <br>
                   <div class="form-group">
+                    <label class="authformLabel" for="#passwordInput">
+                      Password: (Minimun of 8 characters, 1 uppercase character, 1 number and any of the special characters:  #?!@$%^&*)
+                    </label>
                     <input type="password" class="form-control signupInput" id="passwordInput" placeholder="Create a password">
+                  </div>
+                  <div class="form-group clearMargin">
+                    <label class="authformLabel" for="#confirmpasswordInput">Confirm Password</label>                    
+                    <input type="password" class="form-control signupInput" id="confirmpasswordInput" placeholder="Confirm Password">
                   </div>
                 </div>
               </div>
-              <div class="text-center mdMarginTop">
+              <div class="text-center sidePadding">
                 <button class="ghostButton invertedGreen lg">Submit</button>
                 <br>
                 <br>
                 <p>
                   Already have an account?
-                  <a href="#">Login</a>
+                  <a href="#" class="blueText">Login</a>
                 </p>
+                <hr />
+                <button type="button" class="btn btn-block socialBtn google google-login">Connect with Google</button>
+                <br />
+                <button type="button" class="btn btn-block socialBtn facebook facebook-login">Connect with Facebook</button>
+                <br /><br />
               </div>
             </form>
+            <div class="verify-notice">
+              <p class="hCentered">Verify your email to login</p>
+            </div>
           </div>
+          <div class="loader">Loading...</div>
         </div>
       </div>
     </div>

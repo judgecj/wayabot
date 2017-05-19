@@ -1,0 +1,22 @@
+<template name="smsVerification">
+  <div class="container">
+    <div class="page-content" id="page-content-wrapper" >
+      <section>
+        <div class="row">
+          <div class="col-lg-9">
+            <div>
+             Please put in your verification code:
+             <input type="number" class="verificationCode">
+             <button class="confirmVerification">Proceed to site</button>
+             <br> or <br>
+             <button class="resendCode">Click to request new code</button>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            {{> quicklinks}}
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</template>

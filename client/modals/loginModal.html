@@ -1,4 +1,5 @@
 <template name="loginModal">
+  {{> bertAlert}}
   <div class="modal fade">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -7,15 +8,16 @@
           <h3 class="text-center">Login to your account</h3>
         </div>
         <div class="modal-body">
-          <div class="row smallPadding">
-            <form class="">
+          <div class="row paddingSm sidePadding">
+            <form class="loginForm">
               <div class="row">
                 <div class="PaddingTop">
                   <div class="form-group">
+                    <label class="authformLabel" for="#loginEmailInput">Email</label>
                     <input type="email" class="form-control signupInput" id="loginEmailInput" placeholder="Your email address">
                   </div>
-                  <br>
                   <div class="form-group">
+                    <label class="authformLabel" for="#loginPasswordInput">Password</label>
                     <input type="password" class="form-control signupInput" id="loginPasswordInput" placeholder="Your Password">
                   </div>
                 </div>
@@ -28,31 +30,29 @@
                     </div>
                   </div>
                   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <a class="pull-right forgotPassword">
+                    <a class="pull-right blueText forgotPwd">
                       Forgot your password?
                     </a>
                   </div>
                 </div>
               </div>
-              <div class="text-center vMargin">
-                <span class="fancy">OR</span>
-              </div>
-              <div class="row">
-                <div class="PaddingTop">
-                  <button type="button" class="btn btn-block socialBtn google">Connect with Google</button>
-                  <br>
-                  <br>
-                  <button type="button" class="btn btn-block socialBtn facebook">Connect with Facebook</button>
-                </div>
-              </div>
-              <div class="text-center mdMarginTop">
+              <div class="text-center marginTopSm">
                 <button class="ghostButton invertedGreen lg">Submit</button>
-                <br>
-                <br>
+                <br />
+                <br />
                 <p>
                   Don't have an account yet?
-                  <a href="#">Sign up</a>
+                  <a href="#" class="blueText">Sign up</a>
                 </p>
+              </div>
+              <div class="row">
+                <hr />
+                <div class="PaddingTop">
+                  <button type="button" class="btn btn-block socialBtn google google-login">Connect with Google</button>
+                  <br />
+                  <button type="button" class="btn btn-block socialBtn facebook facebook-login">Connect with Facebook</button>
+                  <br />
+                </div>
               </div>
             </form>
           </div>

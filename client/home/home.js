@@ -1,5 +1,4 @@
 Accounts.onEmailVerificationLink(function(token, done){
-	console.log('token from email', token);
   Accounts.verifyEmail(token, function(err){
   	console.log('verifying email', err);
     if(err){
@@ -26,13 +25,3 @@ Template.home.onRendered(function(){
 
 });
 
-Template.home.events({
-  'click .login-btn': function(event, template){
-    event.preventDefault();
-    return Modal.show('loginModal');
-  },
-  'click .signup-btn': function(event, template){
-    event.preventDefault();
-    return Modal.show('signupModal');
-  }
-});

@@ -3,118 +3,114 @@
     <form id="sectional">
       <fieldset>
         <p class="fancy-group">
-          <span class="circularTextHolder">&nbsp;RI&nbsp;</span>
-          <span>Recipient Information</span>
+          <span class="circularTextHolder">&nbsp;CC&nbsp;</span>
+          <span>Currency Converter</span>
         </p>
         <div class="form-section marginTopSm">
           <section>
             <div class="row">
-              <div class="col-lg-9">
+              <div class="col-lg-12">
                 <div class="transparentCard">
-                  <div class="circularTextHolder md verticallyCenteredContainer">
-                    Rate
-                  </div>
-                  <p style="margin-bottom:30px">&nbsp;</p>
-                  <div class="locationFlag">
-                    <div class="row">
-                      <div class="col-sm-12 clearPadding">
-                        <div class="row verticallyCenteredContainer">
-                          <div class="col-sm-8 verticallyCenteredContainer">
-                            <div class="thumbnailHolder col-sm-4">
-                              <img src="http://res.cloudinary.com/doy1ofzki/image/upload/v1468780430/usa_aqhlhr.png" alt="" class="responsiveImg" />
-                            </div>
-                            <div class="col-sm-8 clearPadding">
-                              UNITED STATES
-                            </div>
+
+                  <div class="row border-between" id="currencyConverter">
+                    <div class="col-md-6">
+                      <div class="dropdown currencySelector">
+                        <button class="btn currencySelectBtn dropdown-toggle" type="button" data-toggle="dropdown"><span class="flagThumb"><img src="http://res.cloudinary.com/doy1ofzki/image/upload/v1477776066/US_tqdtak.png" /></span>USD
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="material-icons">keyboard_arrow_down</i></button>
+                        <ul class="dropdown-menu">
+                          <li><a href="#"><span class="flagThumb"><img src="http://res.cloudinary.com/doy1ofzki/image/upload/v1477776066/US_tqdtak.png" /></span>USD</a></li>
+                          <li><a href="#"><span class="flagThumb"><img src="http://res.cloudinary.com/doy1ofzki/image/upload/v1477776066/EU_shvsqg.png" /></span>EUR</a></li>
+                          <li><a href="#"><span class="flagThumb"><img src="http://res.cloudinary.com/doy1ofzki/image/upload/v1477776066/GB_z9odrt.png" /></span>GBP</a></li>
+                          <li><a href="#"><span class="flagThumb"><img src="http://res.cloudinary.com/doy1ofzki/image/upload/v1478221319/NG_rpwbma.png" /></span>NGN</a></li>
+                        </ul>
+                      </div>
+                      <div>
+                        <input type="number" class="form-control currencyValueInputForm" id="originCountry" placeholder="1, 000">
+                        <br />
+                        <label for="originCountry" class="conversionFormLabel">&nbsp;&nbsp;You send</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="">
+                        <div class="verticalLine">
+                          <div class="dropdown currencySelector">
+                            <button class="btn currencySelectBtn dropdown-toggle" type="button" data-toggle="dropdown"><span class="flagThumb"><img src="http://res.cloudinary.com/doy1ofzki/image/upload/v1477776066/GB_z9odrt.png" /></span>GBP
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="material-icons">keyboard_arrow_down</i></button>
+                            <ul class="dropdown-menu">
+                              <li><a href="#"><span class="flagThumb"><img src="http://res.cloudinary.com/doy1ofzki/image/upload/v1477776066/US_tqdtak.png" /></span>USD</a></li>
+                              <li><a href="#"><span class="flagThumb"><img src="http://res.cloudinary.com/doy1ofzki/image/upload/v1477776066/EU_shvsqg.png" /></span>EUR</a></li>
+                              <li><a href="#"><span class="flagThumb"><img src="http://res.cloudinary.com/doy1ofzki/image/upload/v1477776066/GB_z9odrt.png" /></span>GBP</a></li>
+                              <li><a href="#"><span class="flagThumb"><img src="http://res.cloudinary.com/doy1ofzki/image/upload/v1478221319/NG_rpwbma.png" /></span>NGN</a></li>
+                            </ul>
                           </div>
-                          <div class="col-sm-4 verticallyCenteredContainer">
-                            USD 100.00
+                          <div>
+                            <input type="number" class="form-control currencyValueInputForm" id="originCountry" placeholder="2, 345">
+                            <br />
+                            <label for="originCountry" class="conversionFormLabel">&nbsp;&nbsp;Recipient Gets</label>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <hr>
                   </div>
-                  <div class="locationFlag">
-                    <div class="row">
-                      <div class="col-sm-12 clearPadding">
-                        <div class="row verticallyCenteredContainer">
-                          <div class="col-sm-8 verticallyCenteredContainer">
-                            <div class="thumbnailHolder col-sm-4">
-                              <img src="http://res.cloudinary.com/doy1ofzki/image/upload/v1468782175/nigeria_fctx41.png" alt="" class="responsiveImg" />
-                            </div>
-                            <div class="col-sm-8 clearPadding">
-                              NIGERIA
-                            </div>
-                          </div>
-                          <div class="col-sm-4 verticallyCenteredContainer">
-                            NGN 330,000.00
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <hr>
-                  </div>
-                  <div class="locationFlag">
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <div class="row verticallyCenteredContainer">
-                          <div class="col-sm-8 verticallyCenteredContainer">
-                            <p>
-                              Fee
-                            </p>
-                          </div>
-                          <div class="col-sm-4 verticallyCenteredContainer">
-                            USD 2.00
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <hr>
-                  </div>
-                  <div class="locationFlag">
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <div class="row verticallyCenteredContainer">
-                          <div class="col-sm-8 verticallyCenteredContainer">
-                            <p>
-                              Total
-                            </p>
-                          </div>
-                          <div class="col-sm-4 verticallyCenteredContainer">
-                            USD 102.00
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <hr>
-                  </div>
+
                   <br>
-                  <div class="text-center">
+                  <div>
                     <nav class="form-section-nav">
                       <span class="ghostButton invertedGreen lg form-nav-next">Continue</span>
                     </nav>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-3 lgMarginTop mediumPadding">
-                <p class="iconPrefixedText">
-                  <span class="circularTextHolder">&nbsp;&nbsp;!&nbsp;&nbsp;</span>
-                  <span>&nbsp;</span>
-                </p>
-                <br>
-                <p>Note:</p>
-                <p>Estimated Delivery</p>
-                <hr>
-                <p>2-3 days</p>
-                <hr>
-                <p>June 15, 2016</p>
-                <hr>
+            </div>
+          </section>
+        </div>
+      </fieldset>
+
+
+
+
+
+      <fieldset>
+        <p class="fancy-group">
+          <span class="circularTextHolder">&nbsp;SR&nbsp;</span>
+          <span>Select Recipient</span>
+        </p>
+        <div class="form-section marginTopSm">
+          <section>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="transparentCard">
+
+                  <div class="radio">
+                    <label><input type="radio" name="optradio">Recipient 1</label>
+                  </div>
+                  <div class="radio">
+                    <label><input type="radio" name="optradio">Recipient 2</label>
+                  </div>
+                  <div class="radio">
+                    <label><input type="radio" name="optradio">Recipient 3</label>
+                  </div>
+                  <div class="radio">
+                    <label><input type="radio" name="optradio">Recipient 4</label>
+                  </div>
+                  <button type="button" class="btn btn-link" data-toggle="modal" data-target="#addRecipientModal">
+                   Add New Recipient
+                  </button>
+                  <br />
+                  <br />
+                  <div>
+                    <nav class="form-section-nav text-center">
+                      <span class="ghostButton invertedGreen lg form-nav-prev">Back</span>&nbsp;&nbsp;&nbsp;
+                      <span class="ghostButton invertedGreen lg form-nav-next">Continue</span>
+                    </nav>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
         </div>
       </fieldset>
+
       <fieldset>
         <p class="fancy-group">
           <span class="circularTextHolder">&nbsp;PI&nbsp;</span>
@@ -123,19 +119,9 @@
         <div class="form-section marginTopSm">
           <section>
             <div class="transparentCard">
-              <p>
-                <span class="circularTextHolder">&nbsp;&nbsp;!&nbsp;&nbsp;</span>
-                <span>Send Amount</span>
-              </p>
-              <hr>
-              <p>
-                <span class="circularTextHolder">&nbsp;&nbsp;!&nbsp;&nbsp;</span>
-                <span>Payment Info</span>
-              </p>
-              <hr>
               <div class="row">
                 <div class="col-lg-2">
-                  <div class="circularTextHolder lg verticallyCenteredContainer">
+                  <div class="circularTextHolder lg vCentered">
                     <p>
                       Payment Info
                     </p>
@@ -146,7 +132,7 @@
                     <label for="payment_info">Payment Info</label>
                     <input type="text" class="form-control" id="payment_info">
                   </div>
-                  <p class="text-center smVPadding">
+                  <p class="text-center vPaddingSm">
                     <span class="circularTextHolder">Or</span>
                     <span>&nbsp;</span>
                   </p>
@@ -190,13 +176,12 @@
                   </div>
                 </div>
               </div>
+              <br />
+              <nav class="form-section-nav text-center">
+                <span class="ghostButton invertedGreen lg form-nav-prev">Back</span>&nbsp;&nbsp;&nbsp;
+                <span class="ghostButton invertedGreen lg form-nav-next">Continue</span>
+              </nav>
             </div>
-            <nav class="form-section-nav">
-              <div class="submitButtonHolder text-center">
-                <a href="#" class="ghostButton invertedGreen lg form-nav-prev">Back</a>
-                <a href="#" class="ghostButton invertedGreen lg form-nav-next">Continue</a>
-              </div>
-            </nav>
           </section>
         </div>
       </fieldset>
@@ -210,15 +195,15 @@
             <div class="row">
               <div class="col-lg-9">
                 <div class="transparentCard">
-                  <div class="circularTextHolder md verticallyCenteredContainer">
+                  <div class="circularTextHolder md vCentered">
                     Rate
                   </div>
                   <p style="margin-bottom:30px">&nbsp;</p>
                   <div class="locationFlag">
                     <div class="row">
                       <div class="col-sm-12 clearPadding">
-                        <div class="row verticallyCenteredContainer">
-                          <div class="col-sm-8 verticallyCenteredContainer">
+                        <div class="row">
+                          <div class="col-sm-8">
                             <div class="thumbnailHolder col-sm-4">
                               <img src="http://res.cloudinary.com/doy1ofzki/image/upload/v1468780430/usa_aqhlhr.png" alt="" class="responsiveImg" />
                             </div>
@@ -226,7 +211,7 @@
                               UNITED STATES
                             </div>
                           </div>
-                          <div class="col-sm-4 verticallyCenteredContainer">
+                          <div class="col-sm-4">
                             USD 100.00
                           </div>
                         </div>
@@ -237,8 +222,8 @@
                   <div class="locationFlag">
                     <div class="row">
                       <div class="col-sm-12 clearPadding">
-                        <div class="row verticallyCenteredContainer">
-                          <div class="col-sm-8 verticallyCenteredContainer">
+                        <div class="row">
+                          <div class="col-sm-8">
                             <div class="thumbnailHolder col-sm-4">
                               <img src="http://res.cloudinary.com/doy1ofzki/image/upload/v1468782175/nigeria_fctx41.png" alt="" class="responsiveImg" />
                             </div>
@@ -246,7 +231,7 @@
                               NIGERIA
                             </div>
                           </div>
-                          <div class="col-sm-4 verticallyCenteredContainer">
+                          <div class="col-sm-4">
                             NGN 330,000.00
                           </div>
                         </div>
@@ -257,13 +242,13 @@
                   <div class="locationFlag">
                     <div class="row">
                       <div class="col-sm-12">
-                        <div class="row verticallyCenteredContainer">
-                          <div class="col-sm-8 verticallyCenteredContainer">
+                        <div class="row">
+                          <div class="col-sm-8">
                             <p>
                               Fee
                             </p>
                           </div>
-                          <div class="col-sm-4 verticallyCenteredContainer">
+                          <div class="col-sm-4">
                             USD 2.00
                           </div>
                         </div>
@@ -274,13 +259,13 @@
                   <div class="locationFlag">
                     <div class="row">
                       <div class="col-sm-12">
-                        <div class="row verticallyCenteredContainer">
-                          <div class="col-sm-8 verticallyCenteredContainer">
+                        <div class="row">
+                          <div class="col-sm-8">
                             <p>
                               Total
                             </p>
                           </div>
-                          <div class="col-sm-4 verticallyCenteredContainer">
+                          <div class="col-sm-4">
                             USD 102.00
                           </div>
                         </div>
@@ -297,7 +282,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-3 lgMarginTop mediumPadding">
+              <div class="col-lg-3 marginTopLg paddingMd">
                 <p class="iconPrefixedText">
                   <span class="circularTextHolder">&nbsp;&nbsp;!&nbsp;&nbsp;</span>
                   <span>&nbsp;</span>
@@ -335,7 +320,7 @@
               <hr>
               <div class="row">
                 <div class="col-lg-2">
-                  <div class="circularTextHolder lg verticallyCenteredContainer">
+                  <div class="circularTextHolder lg vCentered">
                     <p>
                       Review Transaction
                     </p>
@@ -432,7 +417,7 @@
             </div>
             <nav class="form-section-nav">
               <div class="submitButtonHolder text-center">
-                <span class="ghostButton invertedGreen lg form-nav-prev">Prev</span> &nbsp;
+                <span class="ghostButton invertedGreen lg form-nav-prev">Prev</span> &nbsp;&nbsp;&nbsp;
                 <span class="ghostButton invertedGreen lg form">Confirm</span>
               </div>
             </nav>
@@ -441,4 +426,54 @@
       </fieldset>
     </form>
   </section>
+
+  <div class="modal fade" id="addRecipientModal" tabindex="-1" role="dialog" aria-labelledby="addRecipientModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h3 class="modal-title text-center" id="addRecipientModalLabel">Add New Recipient</h3>
+        </div>
+        <div class="modal-body">
+          <div class="sidePadding">
+            <br />
+            <br />
+            <div class="form-group">
+              <label for="name">Recipients Name</label>
+              <input type="text" class="form-control" id="name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email">
+            </div>
+            <br />
+            <h4>Bank Details</h4>
+            <hr />
+            <label for="bankSelector">Select Bank</label>
+            <select class="form-control" id="bankSelector">
+              <option>Bank 1</option>
+              <option>Bank 2</option>
+              <option>Bank 3</option>
+              <option>Bank 4</option>
+            </select>
+            <div class="form-group">
+              <label for="accountNumber">IBAN</label>
+              <input type="text" class="form-control" id="accountNumber" placeholder="DE89370400440532013000">
+            </div>
+            <div class="form-group">
+                <label for="routingNumber">Routing Number</label>
+                <input type="text" class="form-control" id="routingNumber" placeholder="101010101">
+              </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn ghostButton invertedRed" data-dismiss="modal">Close</button>
+          <button type="button" class="btn ghostButton invertedGreen">+ Add Recipient</button>
+          <br />
+          <br />
+        </div>
+      </div>
+    </div>
+  </div>
 </template>

@@ -21,7 +21,6 @@ insecure                # Allow all DB writes from clients (for prototyping)
 accounts-password
 mrt:isotope-repackaged
 iron:router
-themeteorchef:jquery-validation
 session
 service-configuration
 accounts-facebook
@@ -30,3 +29,11 @@ udondan:googlefonts
 planettraining:material-design-icons-font
 peppelg:bootstrap-3-modal
 twbs:bootstrap
+accounts-google
+themeteorchef:bert@1.1.0
+themeteorchef:jquery-validation
+abhiaiyer:meteor-twilio
+momentjs:moment
+dispatch:twilio
+peerlibrary:async
+fortawesome:fontawesome

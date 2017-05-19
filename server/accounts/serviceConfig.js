@@ -2,23 +2,23 @@
   { service: "facebook" },
   {
     $set: {
-      appId: "268400600215172",
-      loginStyle: "popup",
-      secret: "36eb23c94574dcde835ee7de748b54f0"
+      appId: process.env.fb_appId,
+      loginStyle: "redirect",
+      secret: process.env.fb_secret
     }
   }
 );
 
-// Accounts.loginServiceConfiguration.remove({
-//   service: 'facebook'
-// });
-
-// Accounts.loginServiceConfiguration.insert({
-//   service: 'facebook',
-//   appId: '268400600215172',
-//   secret: '36eb23c94574dcde835ee7de748b54f0'
-// })
-
+ServiceConfiguration.configurations.upsert(
+ { service: "google" },
+ {
+   $set: {
+     clientId: process.env.google_clientId,
+     loginStyle: "redirect",
+     secret: process.env.google_secret
+   }
+ }
+);
 
 // Accounts.loginServiceConfiguration.insert({
 //   service: 'github',
@@ -28,10 +28,5 @@
 // Accounts.loginServiceConfiguration.insert({
 //   service: 'twitter',
 //   consumerKey: '00000',
-//   secret: '00000'
-// });
-// Accounts.loginServiceConfiguration.insert({
-//   service: 'google',
-//   appId: '00000',
 //   secret: '00000'
 // });
